@@ -1,0 +1,23 @@
+#Configuration file for Microsoft® LifeCam Cinema(TM)
+#Edit your configuration here before starting your behavior/nodelet =)
+
+device_name: 'Microsoft® LifeCam Cinema(TM)'
+absolute_exposure: 2089
+camera_info_url: 'cameraTop'
+camera_name: 'cameraTop'
+brightness: 66
+contrast: 50
+exposure: 1
+focus_absolute: 0
+focus_auto: 1 # Can be changed
+format_mode: 0 # 0 means MODE_RGB, 2 for MODE_YUYV
+frame_id: 'camera'
+frame_rate: 17 # Can be changed
+gain: 82
+height: 480
+power_line_frequency: 0
+saturation: = 50
+sharpness: 142
+white_balance_temperature: true
+width: 640
+

@@ -1,0 +1,19 @@
+device_name: 'Microsoft® LifeCam Cinema(TM)'
+absolute_exposure: 2089
+camera_info_url: ''
+camera_name: 'camera'
+brightness: 66
+contrast: 50
+exposure: 1
+focus_absolute: 0
+focus_auto: 0
+format_mode: = 0
+frame_id: 'camera'
+frame_rate: 15
+gain: 82
+height: 480
+power_line_frequency: 0
+saturation: = 50
+sharpness: 142
+white_balance_temperature: true
+width: 640

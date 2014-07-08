@@ -1,0 +1,15 @@
+<library path="lib/libhyve_camera_common_nodelet">
+  <class name="cam_nodelet/UVCCamNode" type="cam_nodelet::Uvc_cam_node" base_class_type="nodelet::Nodelet">
+    <description>
+      Implementing UCVCAM node as a nodelet
+    </description>
+  </class>
+</library>
+
+<library path="lib/libdisplay_nodelet">
+  <class name="display_nodelet/Display_node" type="display_nodelet::Display_node" base_class_type="nodelet::Nodelet">
+    <description>
+    Implementing a display nodelet
+    </description>
+  </class>
+</library>
