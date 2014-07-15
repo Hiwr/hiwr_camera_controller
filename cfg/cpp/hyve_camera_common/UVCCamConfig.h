@@ -513,9 +513,9 @@ UVCCamConfig::GroupDescription<UVCCamConfig::DEFAULT, UVCCamConfig> Default("Def
 //#line 259 "/opt/ros/groovy/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator.py"
       __default__.format_mode = 1;
 //#line 259 "/opt/ros/groovy/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator.py"
-      Default.abstract_parameters.push_back(UVCCamConfig::AbstractParamDescriptionConstPtr(new UVCCamConfig::ParamDescription<int>("format_mode", "int", 3, "The format the camera should be captured in", "{'enum_description': 'The camera capture format', 'enum': [{'srcline': 44, 'description': 'Capture in RGB mode', 'srcfile': '/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'MODE_RGB'}, {'srcline': 45, 'description': 'Capture in YUYV mode', 'srcfile': '/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'MODE_YUYV'}, {'srcline': 46, 'description': 'Capture in MJPG mode', 'srcfile': '/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 3, 'ctype': 'int', 'type': 'int', 'name': 'MODE_MJPEG'}]}", &UVCCamConfig::format_mode)));
+      Default.abstract_parameters.push_back(UVCCamConfig::AbstractParamDescriptionConstPtr(new UVCCamConfig::ParamDescription<int>("format_mode", "int", 3, "The format the camera should be captured in", "{'enum_description': 'The camera capture format', 'enum': [{'srcline': 44, 'description': 'Capture in RGB mode', 'srcfile': '/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'MODE_RGB'}, {'srcline': 45, 'description': 'Capture in YUYV mode', 'srcfile': '/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'MODE_YUYV'}, {'srcline': 46, 'description': 'Capture in MJPG mode', 'srcfile': '/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 3, 'ctype': 'int', 'type': 'int', 'name': 'MODE_MJPEG'}]}", &UVCCamConfig::format_mode)));
 //#line 259 "/opt/ros/groovy/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator.py"
-      __param_descriptions__.push_back(UVCCamConfig::AbstractParamDescriptionConstPtr(new UVCCamConfig::ParamDescription<int>("format_mode", "int", 3, "The format the camera should be captured in", "{'enum_description': 'The camera capture format', 'enum': [{'srcline': 44, 'description': 'Capture in RGB mode', 'srcfile': '/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'MODE_RGB'}, {'srcline': 45, 'description': 'Capture in YUYV mode', 'srcfile': '/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'MODE_YUYV'}, {'srcline': 46, 'description': 'Capture in MJPG mode', 'srcfile': '/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 3, 'ctype': 'int', 'type': 'int', 'name': 'MODE_MJPEG'}]}", &UVCCamConfig::format_mode)));
+      __param_descriptions__.push_back(UVCCamConfig::AbstractParamDescriptionConstPtr(new UVCCamConfig::ParamDescription<int>("format_mode", "int", 3, "The format the camera should be captured in", "{'enum_description': 'The camera capture format', 'enum': [{'srcline': 44, 'description': 'Capture in RGB mode', 'srcfile': '/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'MODE_RGB'}, {'srcline': 45, 'description': 'Capture in YUYV mode', 'srcfile': '/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'MODE_YUYV'}, {'srcline': 46, 'description': 'Capture in MJPG mode', 'srcfile': '/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg', 'cconsttype': 'const int', 'value': 3, 'ctype': 'int', 'type': 'int', 'name': 'MODE_MJPEG'}]}", &UVCCamConfig::format_mode)));
 //#line 259 "/opt/ros/groovy/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator.py"
       __min__.width = 0;
 //#line 259 "/opt/ros/groovy/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator.py"
@@ -755,11 +755,11 @@ UVCCamConfig::GroupDescription<UVCCamConfig::DEFAULT, UVCCamConfig> Default("Def
     return statics;
   }
 
-//#line 44 "/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg"
+//#line 44 "/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg"
       const int UVCCam_MODE_RGB = 1;
-//#line 45 "/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg"
+//#line 45 "/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg"
       const int UVCCam_MODE_YUYV = 2;
-//#line 46 "/home/jules/git_kazan/src/hyve-camera-common/cfg/UVCCam.cfg"
+//#line 46 "/home/jules/git_hiwr/src/hiwr-camera-controller/cfg/UVCCam.cfg"
       const int UVCCam_MODE_MJPEG = 3;
 }
 

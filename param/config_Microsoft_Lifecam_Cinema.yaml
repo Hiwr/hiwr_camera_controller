@@ -14,10 +14,10 @@ format_mode: 0 # 0 means MODE_RGB, 2 for MODE_YUYV
 frame_id: 'camera'
 frame_rate: 17 # Can be changed
 gain: 82
-height: 480
+height: 240
 power_line_frequency: 0
 saturation: = 50
 sharpness: 142
 white_balance_temperature: true
-width: 640
+width: 320
 

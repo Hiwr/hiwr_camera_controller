@@ -12,21 +12,17 @@
 
 
    <!-- UVCCam Nodelet Top -->
-<!--
+
    <node pkg="nodelet" type="nodelet" name="camTop" args="load cam_nodelet/UVCCamNode nodelet_manager_top">
-     <rosparam file="$(find hyve_camera_common)/param/config_Microsoft_Lifecam_Cinema.yaml"/>
+     <rosparam file="$(find hiwr_camera_controller)/param/config_Microsoft_Lifecam_Cinema.yaml"/>
    </node>
 
 
    <!-- UVCCam Nodelet Bottom-->
-   <node pkg="nodelet" type="nodelet" name="camBottom" args="load cam_nodelet/UVCCamNode nodelet_manager_bottom">
+<!--   <node pkg="nodelet" type="nodelet" name="camBottom" args="load cam_nodelet/UVCCamNode nodelet_manager_bottom">
       <rosparam file="$(find hyve_camera_common)/param/config_Logitech_C920.yaml"/>
    </node>
-
- <node pkg="nodelet" type="nodelet" name="scanner_1" args="load scanner_nodelet/Scanner_node nodelet_manager_bottom">
-    <param name="video_stream" type="str" value="/camBottom/output_video" />
-    <rosparam file="$(find hyve_scanner_nodelet)/param/config_Scanner.yaml"/>
- </node>
+-->
 <!--
    <node pkg="nodelet" type="nodelet" name="bar_code_1" args="load bar_code_nodelet/Bar_code_node nodelet_manager_bottom">
      <param name="video_stream" type="str" value="/camBottom/output_video" />

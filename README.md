@@ -29,18 +29,16 @@ have a working ROS core running):
 
    Launch using roslaunch:
 
-   > roslaunch hyve\_camera_common camera.launch
+   > roslaunch hyve\_camera\_common camera.launch
 
 
 Node
 ----------------------
 
-### Subscribed Topics
-
 
 ### Published Topics
 
-- `/uvc_cam_node/output_video`
+- `/hiwr_camera_controller/output_video`
       *  video stream (sensor_msgs/Image)
 
 

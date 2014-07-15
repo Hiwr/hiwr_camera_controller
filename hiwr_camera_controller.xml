@@ -1,5 +1,5 @@
-<library path="lib/libhyve_camera_common_nodelet">
-  <class name="cam_nodelet/UVCCamNode" type="cam_nodelet::Uvc_cam_node" base_class_type="nodelet::Nodelet">
+<library path="lib/libhiwr_camera_controller">
+  <class name="hiwr_camera_controller/HiwrCameraControllerNodelet" type="hiwr_camera_controller::HiwrCameraControllerNodelet" base_class_type="nodelet::Nodelet">
     <description>
       Implementing UCVCAM node as a nodelet
     </description>
