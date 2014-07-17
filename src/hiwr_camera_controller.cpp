@@ -463,13 +463,13 @@ void HiwrCameraControllerNodelet::spin() {
     }
 }
 
-bool HiwrCameraControllerNodelet::serviceSetSpinningState( hyve_msg::SetState::Request &req ,hyve_msg::SetState::Response  &res  ){
+bool HiwrCameraControllerNodelet::serviceSetSpinningState( hiwr_msg::SetState::Request &req ,hiwr_msg::SetState::Response  &res  ){
     res.state = req.state;
     setSpinningState(req.state);
     return true;
 }
 
-bool HiwrCameraControllerNodelet::serviceGetSpinningState( hyve_msg::GetState::Request &req ,hyve_msg::GetState::Response  &res  ){
+bool HiwrCameraControllerNodelet::serviceGetSpinningState( hiwr_msg::GetState::Request &req ,hiwr_msg::GetState::Response  &res  ){
     res.state =getSpinningState();
     return true;
 }

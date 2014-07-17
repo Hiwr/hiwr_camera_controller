@@ -1,66 +1,87 @@
-#include <opencv/cv.h>
+/*********************************************************************
+*
+*
+* Copyright 2014 Worldline
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+***********************************************************************/
 
-#include <cv_bridge/cv_bridge.h>
-#include <nodelet/nodelet.h>
-#include "std_msgs/String.h"
-#include <uvc_cam.h>
-
-#include <hyve_msg/SetState.h>
-#include <hyve_msg/GetState.h>
-
+// Common
 #include <stdexcept> //runtime_error exception
 #include <dlfcn.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
 #include <signal.h>
 #include <cstdio>
+#include <condition_variable>
+
+// Nodelet
+#include <nodelet/nodelet.h>
+#include <pluginlib/class_list_macros.h>
+
+// Msgs
+#include <hiwr_msg/SetState.h>
+#include <hiwr_msg/GetState.h>
+#include "std_msgs/String.h"
+
+// Thread
 #include <thread>
 #include <mutex>
+
+// ROS
 #include <ros/ros.h>
 #include <ros/time.h>
 #include <ros/console.h>
+#include <cv_bridge/cv_bridge.h>
 
+// Sensors
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/CameraInfo.h>
 #include <sensor_msgs/fill_image.h>
 
-#include <camera_info_manager/camera_info_manager.h>
 
 #include <dynamic_reconfigure/server.h>
 
+// Driver Base
 #include <driver_base/SensorLevels.h>
 #include <driver_base/driver.h>
 
+// Camera
+#include <camera_info_manager/camera_info_manager.h>
 #include <image_transport/image_transport.h>
-#include "hyve_camera_common/UVCCamConfig.h"
+#include "hiwr_camera_controller/UVCCamConfig.h"
+#include <uvc_cam.h>
+#include "../src/selectCam.c"
 
+// Opencv
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
-
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include <rospack/rospack.h>
+//#include <rospack/rospack.h>
 
 #include <tf/transform_listener.h>
 
-#include <condition_variable>
 
-//#include "HiwrCameraControllerNodelet.h"
-#include "../src/selectCam.c"
-
-//Nodelet include
-#include <pluginlib/class_list_macros.h>
 
 namespace hiwr_camera_controller
 {
 
-
-
 class HiwrCameraControllerNodelet : public nodelet::Nodelet{
 public:
-    typedef hyve_camera_common::UVCCamConfig Config;
+    typedef hiwr_camera_controller::UVCCamConfig Config;
     Config config_;
     void reconfig(HiwrCameraControllerNodelet::Config&, uint32_t);
     void lockedReconfig(HiwrCameraControllerNodelet::Config &, uint32_t );
@@ -94,8 +115,8 @@ public:
     void configurePublishing(ros::NodeHandle&);
     void configureSpinning(ros::NodeHandle&);
 
-    bool serviceSetSpinningState( hyve_msg::SetState::Request&, hyve_msg::SetState::Response&);
-    bool serviceGetSpinningState( hyve_msg::GetState::Request&, hyve_msg::GetState::Response&);
+    bool serviceSetSpinningState( hiwr_msg::SetState::Request&, hiwr_msg::SetState::Response&);
+    bool serviceGetSpinningState( hiwr_msg::GetState::Request&, hiwr_msg::GetState::Response&);
 
 
 protected:
@@ -116,6 +137,7 @@ private:
     typedef driver_base::SensorLevels Levels;
     Driver::state_t state_;               // current driver state
 
+    // Node Handler
     ros::NodeHandle private_nh_;              // private node handle
     ros::NodeHandle public_nh_;           // camera name space handle
 
@@ -132,7 +154,7 @@ private:
     std::mutex mutex_;
     std::condition_variable waiter_;
 
-    hyve_camera_common::UVCCamConfig next_config_;
+    hiwr_camera_controller::UVCCamConfig next_config_;
     uint32_t next_config_level_;
     bool next_config_update_;
     int next_config_count_;

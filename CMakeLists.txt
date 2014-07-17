@@ -14,7 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   camera_info_manager
   driver_base
   nodelet
-  hyve_msg
+  hiwr_msg
   )
 
 
